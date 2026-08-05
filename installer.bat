@@ -33,8 +33,8 @@ echo [2/4] Mise a jour de pip...
 python -m pip install --upgrade pip
 
 echo.
-echo [3/4] Installation des modules (onnxruntime, numpy, pillow)...
-python -m pip install --upgrade onnxruntime numpy pillow pyinstaller
+echo [3/4] Installation des modules (onnxruntime, numpy, pillow, potracer)...
+python -m pip install --upgrade onnxruntime numpy pillow potracer pyinstaller
 if errorlevel 1 (
     echo.
     echo  !! Probleme pendant l'installation. Verifiez internet et relancez.

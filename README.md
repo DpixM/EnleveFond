@@ -16,9 +16,13 @@ fonctionne **hors-ligne** grâce à un modèle d'intelligence artificielle
 - Range tout proprement dans un dossier que **vous nommez** :
   ```
   MonDossier/
-    ├── Images/   → les PNG (fond transparent)
-    └── SVG/      → les mêmes images en .svg
+    ├── Images/          → les PNG (fond transparent)
+    ├── SVG/             → les images en .svg (contient la photo)
+    └── SVG_Vectorise/   → de vrais SVG vectoriels (tracés)
   ```
+- Le dossier **`SVG_Vectorise/`** contient des SVG en **tracés vectoriels**
+  (le trait de l'image est vectorisé), directement utilisables dans un
+  slicer 3D (Bambu Studio…), une découpe (Cricut, laser) ou une gravure.
 - Nom de dossier pré-rempli avec la date/heure : appuyez sur **Entrée**
   pour aller vite, ou tapez le vôtre.
 
@@ -35,12 +39,17 @@ d'IA (~170 Mo). Ensuite, tout fonctionne sans internet.
    (cochez bien **« Add Python to PATH »** pendant l'installation).
 2. Téléchargez ce projet (bouton vert **Code → Download ZIP**) et
    décompressez-le.
-3. Double-cliquez sur **`installer.bat`** et laissez-le finir.
-4. Votre logiciel est créé dans le sous-dossier **`dist`** :
-   `EnleveFond.exe`.
 
-Astuce : clic droit sur `EnleveFond.exe` → *Envoyer vers* → *Bureau
-(créer un raccourci)*.
+Ensuite, deux façons de l'utiliser :
+
+**Option A — la plus simple (recommandée) :** double-cliquez sur
+**`LANCER_EnleveFond.bat`**. Il installe ce qu'il faut au 1er lancement
+puis ouvre le logiciel. Rien d'autre à faire.
+
+**Option B — créer un vrai `.exe` :** double-cliquez sur
+**`installer.bat`** ; votre logiciel est créé dans le sous-dossier
+**`dist`** (`EnleveFond.exe`). Astuce : clic droit → *Envoyer vers →
+Bureau (créer un raccourci)*.
 
 ## 🖱️ Utilisation
 
@@ -55,6 +64,7 @@ Astuce : clic droit sur `EnleveFond.exe` → *Envoyer vers* → *Bureau
 - Interface : `tkinter` (inclus avec Python).
 - IA : modèle **u2net** exécuté via **onnxruntime**.
 - Traitement d'image : **Pillow** + **numpy**.
+- Vectorisation : **potracer** (tracé de la silhouette / du trait).
 - Le `.exe` est construit avec **PyInstaller**.
 
 Aucune donnée n'est collectée, aucun serveur externe n'est contacté
